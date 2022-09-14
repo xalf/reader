@@ -1,0 +1,28 @@
+.text-page {
+    padding: 20px;
+    display: flex;
+}
+
+.text-page__text {
+    padding-right: 10px;
+    flex-grow: 1;
+}
+
+
+/* todo mobile menu */
+.text-page__dictionary {
+    width: 200px;
+    min-width: 200px;
+    border-left: 1px solid #bbb;
+    padding-left: 10px;
+}
+
+@media (max-width: 800px) {
+    .text-page__text {
+        width: 100%;
+    }
+
+    .text-page__dictionary {
+       display: none;
+    }
+}

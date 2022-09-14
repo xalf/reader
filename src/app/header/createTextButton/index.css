@@ -1,0 +1,21 @@
+.create-text__modal {
+    width: 500px;
+}
+
+.create-text__title {
+    margin: 0 0 15px;
+}
+
+.create-text__input {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #bbb;
+    margin-bottom: 15px;
+}
+
+.create-text__title-input {
+    width: 100%;
+    border: 1px solid #bbb;
+    margin-bottom: 15px;
+    padding: 7px;
+}

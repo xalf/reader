@@ -1,0 +1,13 @@
+.selected-panel {
+    position: absolute;
+    bottom: 105%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #bbb;
+    max-width: 300px;
+}
+
+.selected-panel__text {
+    margin: 0 0 5px;
+}

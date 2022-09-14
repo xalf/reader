@@ -1,0 +1,9 @@
+.text-panel {
+    line-height: 1.5em;
+    font-size: 20px;
+}
+
+.text-panel__selected {
+    background-color: #003490;
+    position: relative;
+}

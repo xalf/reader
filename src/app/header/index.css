@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #bbb;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.header__links {
+    flex-grow: 1;
+}
+
+.header__title {
+    margin-right: 20px;
+    color: #003490;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.header__dictionary-link {
+    color: #494949;
+    font-size: 16px;
+    text-decoration: none;
+}

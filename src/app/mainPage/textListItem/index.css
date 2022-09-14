@@ -1,0 +1,25 @@
+.text-list-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+}
+
+.text-list-item:hover {
+    background-color: rgba(228, 238, 255, 0.7);
+    text-decoration: none;
+}
+
+.text-list-item__subtext {
+    color: #8c8c8c;
+}
+
+.text-list-item__text {
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+.text-list-item__count {
+    font-size: 20px;
+}

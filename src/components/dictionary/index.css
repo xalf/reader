@@ -1,0 +1,14 @@
+.dictionary {
+    margin: 0;
+    padding: 0;
+}
+
+.dictionary-item {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.dictionary-item__translate {
+    cursor: pointer;
+    text-decoration: underline;
+}
