@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './index.css';
 import {ModalProps} from "./types";
+import CloseIcon from "../closeIcon";
 
 const modalRoot: HTMLElement = document.getElementById('modal-root') as HTMLElement;
 
@@ -33,7 +34,9 @@ export default class Modal extends React.Component<any, any> {
 
 export function ModalBody(props: ModalProps) {
   return <div className="modal-body">
-    <span className="modal-body__close" onClick={props.onClose}></span>
+    <div className="modal-body__close" onClick={props.onClose}>
+      <CloseIcon width={33} />
+    </div>
     {props.children}
   </div>
 }

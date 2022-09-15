@@ -1,0 +1,40 @@
+.mobile-menu-panel {
+    border-left: 1px solid #bbb;
+    display: flex;
+}
+
+.mobile-menu-panel__button {
+    display: none;
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+    background-color: #8dacdc;
+    opacity: 0.5;
+}
+
+.mobile-menu-panel__button:hover {
+    opacity: 0.8;
+}
+
+.mobile-menu-panel__content {
+    display: block;
+    width: 200px;
+    padding-left: 10px;
+}
+
+.mobile-menu-panel__content.isOpen {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .mobile-menu-panel {
+        width: auto;
+        border: none;
+    }
+    .mobile-menu-panel__button {
+        display: block;
+    }
+    .mobile-menu-panel__content {
+        display: none;
+    }
+}

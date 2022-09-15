@@ -13,10 +13,17 @@ export default function DictionaryPage(props: DictionaryPageProps) {
   return <PagePanel>
     <div className="dictionary-page">
       <Title>Dictionary page</Title>
-      <Dictionary items={dictionary} addToDictionary={(value) => {
-        const newDictionary = props.storage.addToDictionary(value);
-        setDictionary(newDictionary);
-      }} />
+      <Dictionary
+        items={dictionary}
+        addToDictionary={(value) => {
+          const newDictionary = props.storage.addToDictionary(value);
+          setDictionary(newDictionary);
+        }}
+        deleteFromDictionary={(value) => {
+          const newDictionary = props.storage.deleteFromDictionary(value);
+          setDictionary(newDictionary);
+        }}
+      />
     </div>
   </PagePanel>;
 }

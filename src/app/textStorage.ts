@@ -5,8 +5,9 @@ export interface ITextStorage {
   addText: (text: string, title: string) => string;
   getTexts: () => Array<Text>;
   getTextById: (id: string) => Text;
-  getDictionary: () => Array<Dictionary>
-  addToDictionary: (dictionary: Dictionary) => Array<Dictionary>
+  getDictionary: () => Array<Dictionary>;
+  addToDictionary: (dictionary: Dictionary) => Array<Dictionary>;
+  deleteFromDictionary(dictionary: Dictionary): Array<Dictionary>;
 }
 
 export class TextBrowserStorage implements ITextStorage {
@@ -49,7 +50,7 @@ export class TextBrowserStorage implements ITextStorage {
   }
 
   addToDictionary(dictionary: Dictionary): Array<Dictionary> {
-    const list: Array<Text> = this.getTexts()
+    const list: Array<Text> = this.getTexts();
     const page: Text | undefined = list.find((item) => item.id === dictionary.textId);
     if (!page) return [];
 
@@ -63,6 +64,19 @@ export class TextBrowserStorage implements ITextStorage {
     } else {
       page.dictionary.push(dictionary);
     }
+    const newListStr = JSON.stringify(list);
+    localStorage.setItem(this.KEY, newListStr);
+
+    return page.dictionary;
+  }
+
+  deleteFromDictionary(dictionary: Dictionary): Array<Dictionary> {
+    const list: Array<Text> = this.getTexts();
+    const page: Text | undefined = list.find((item) => item.id === dictionary.textId);
+    if (!page) return [];
+
+    page.dictionary = page.dictionary.filter((item) => item.text !== dictionary.text);
+
     const newListStr = JSON.stringify(list);
     localStorage.setItem(this.KEY, newListStr);
 

@@ -6,6 +6,7 @@ import PagePanel from "../../components/pagePanel";
 import Title from "../../components/title";
 import './index.css';
 import TextPanel from "./textPanel";
+import MobileMenuPanel from "../../components/mobileMenuPanel";
 
 export default function TextPage(props: TextPageProps) {
   const params: any = useParams();
@@ -28,15 +29,19 @@ export default function TextPage(props: TextPageProps) {
           }}
         />
       </div>
-      <div className="text-page__dictionary">
+      <MobileMenuPanel>
         <Dictionary
           items={dictionary}
           addToDictionary={(value) => {
             const newDictionary = props.storage.addToDictionary(value);
             setDictionary(newDictionary);
           }}
+          deleteFromDictionary={(value) => {
+            const newDictionary = props.storage.deleteFromDictionary(value);
+            setDictionary(newDictionary);
+          }}
         />
-      </div>
+      </MobileMenuPanel>
     </div>
   </PagePanel>;
 }

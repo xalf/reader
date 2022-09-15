@@ -1,0 +1,19 @@
+.close-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.close-icon__before, .close-icon__after {
+    position: absolute;
+    left: 37%;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #333;
+}
+.close-icon__before {
+    transform: rotate(45deg);
+}
+.close-icon__after {
+    transform: rotate(-45deg);
+}

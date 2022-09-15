@@ -1,0 +1,19 @@
+.dictionary-item {
+    margin-bottom: 15px;
+    width: 320px;
+}
+
+.dictionary-item__translate {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dictionary-item__delete {
+    display: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.dictionary-item:hover .dictionary-item__delete {
+    display: inline;
+}
